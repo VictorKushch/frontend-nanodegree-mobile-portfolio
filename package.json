@@ -1,0 +1,27 @@
+{
+  "name": "news-aggregator",
+  "version": "1.0.0",
+  "description": "App optimization project",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorKushch/news-aggregator.git"
+  },
+  "keywords": [
+    "performance_optimization",
+    "speed_optimization"
+  ],
+  "author": "V Kushch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorKushch/news-aggregator/issues"
+  },
+  "homepage": "https://github.com/VictorKushch/news-aggregator#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-responsive-images": "^0.1.9"
+  }
+}
