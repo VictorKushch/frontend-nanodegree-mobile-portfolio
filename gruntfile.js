@@ -31,8 +31,8 @@ module.exports = function(grunt) {
 
         cssmin: {
             minify: {
-                    src: 'views/css/style.css',
-                    dest: 'views/css/style.min.css'
+                    src: 'views/css/bootstrap-grid.css',
+                    dest: 'views/css/bootstrap-grid.min.css'
                 }
         },
 
@@ -83,5 +83,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-imageoptim');
-    grunt.task.registerTask('default', [ 'imageoptim']);
+    grunt.task.registerTask('default', [ 'cssmin']);
 }
