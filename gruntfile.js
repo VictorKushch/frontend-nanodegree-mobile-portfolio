@@ -21,6 +21,15 @@ module.exports = function(grunt) {
                 }]
             }
         },
+
+        cssmin: {
+            minify: {
+                    src: 'views/css/style.css',
+                    dest: 'views/css/style.min.css'
+                }
+        },
+
+
         imagemin: {
             png: {
               options: {
@@ -65,5 +74,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.task.registerTask('default', [ 'imagemin']);
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.task.registerTask('default', [ 'cssmin']);
 }
