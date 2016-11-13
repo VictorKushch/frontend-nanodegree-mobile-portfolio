@@ -3,6 +3,12 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        imageoptim: {
+          myTask: {
+            src: ['views/images']
+          }
+        },
+
         uglify: {
             my_target: {
                 files: {
@@ -34,7 +40,7 @@ module.exports = function(grunt) {
         imagemin: {
             png: {
               options: {
-                optimizationLevel: 5
+                optimizationLevel: 7
               },
               files: [
                 {
@@ -76,5 +82,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.task.registerTask('default', [ 'uglify']);
+    grunt.loadNpmTasks('grunt-imageoptim');
+    grunt.task.registerTask('default', [ 'imageoptim']);
 }
