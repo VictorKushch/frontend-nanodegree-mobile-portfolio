@@ -16,8 +16,8 @@ module.exports = function(grunt) {
                     expand: true,
                     src: ['*.{jpg,gif,png}'],
                     //src: ['img/2048.png'],
-                    cwd: 'img/',
-                    dest: 'img/dest/'
+                    cwd: 'views/images',
+                    dest: 'views/images/dest/'
                 }]
             }
         },
@@ -31,10 +31,10 @@ module.exports = function(grunt) {
                   // Set to true to enable the following options…
                   expand: true,
                   // cwd is 'current working directory'
-                  cwd: 'img/dest',
+                  cwd: 'views/images/dest',
                   src: ['*.png'],
                   // Could also match cwd line above. i.e. project-directory/img/
-                  dest: 'img/dest/compressed/',
+                  dest: 'views/images/dest/compressed',
                   ext: '.png'
                 }
               ]
@@ -49,10 +49,10 @@ module.exports = function(grunt) {
                   // Set to true to enable the following options…
                   expand: true,
                   // cwd is 'current working directory'
-                  cwd: 'img/dest',
+                  cwd: 'views/images/dest',
                   src: ['*.jpg'],
                   // Could also match cwd. i.e. project-directory/img/
-                  dest: 'img/dest/compressed/',
+                  dest: 'views/images/dest/compressed',
                   ext: '.jpg'
                 }
               ]
