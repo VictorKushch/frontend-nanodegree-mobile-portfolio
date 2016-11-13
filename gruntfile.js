@@ -2,10 +2,11 @@ module.exports = function(grunt) {
  
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
         uglify: {
-            js: {
+            my_target: {
                 files: {
-                    'scripts/app.min.js': 'scripts/app.js'
+                    'js/perfmatters.min.js' : 'js/perfmatters.js'
                 }
             }
         },
@@ -75,5 +76,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.task.registerTask('default', [ 'cssmin']);
+    grunt.task.registerTask('default', [ 'uglify']);
 }
