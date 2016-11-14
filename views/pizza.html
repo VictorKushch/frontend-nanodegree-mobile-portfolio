@@ -136,11 +136,18 @@
     </div>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
+
+
   <!--JS script loadin-->
+  <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css"/>
+  </noscript>
+  <script async src="views/js/css-lader.js"></script>
+  <!--
   <script async>function loadStyleSheet(src){if(document.createStyleSheet)document.createStyleSheet(src);else{var stylesheet = document.createElement('link');stylesheet.href = src;stylesheet.rel = 'stylesheet';stylesheet.type = 'text/css';document.getElementsByTagName('head')[0].appendChild(stylesheet);}}</script>
   <script async type="text/javascript" src="js/main.js"></script>
 
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
   <!--END JS script loadin-->
 </body>
 
