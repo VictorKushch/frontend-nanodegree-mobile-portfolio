@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'js/perfmatters.min.js' : 'js/perfmatters.js'
+                    'css-loader.min.js' : 'views/js/css-lader.js'
                 }
             }
         },
@@ -83,5 +83,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-imageoptim');
-    grunt.task.registerTask('default', [ 'cssmin']);
+    grunt.task.registerTask('default', [ 'uglify']);
 }
