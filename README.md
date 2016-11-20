@@ -1,6 +1,6 @@
 ## Website Performance Optimization portfolio project
 
-To get started, check out the live version [here](test.ku-64.com) and see Google test performance [here](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftest.ku-64.com%2F&tab=desktop). 
+To get started, check out the live version [here](http://test.ku-64.com) and see Google test performance [here](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftest.ku-64.com%2F&tab=desktop). 
 
 ### Performance optimization steps done
 
