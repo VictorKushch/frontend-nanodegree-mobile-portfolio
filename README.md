@@ -1,40 +1,25 @@
 ## Website Performance Optimization portfolio project
 
+To get started, check out the live version [here](test.ku-64.com) and see Google test performance [here](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftest.ku-64.com%2F&tab=desktop). 
 
+### Performance optimization steps done
 
-To get started, check out the repository and inspect the code.
+####Grunt implementation
 
-### Getting started
+1. 3 versions of images created with "grunt-responsive-images"
+1. Images compressed with "grunt-imageoptim" and "grunt-contrib-imagemin"
+1. CSS optimized with "cssmin"
+1. JS compressed with "uglify"
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+####HTML file
+1. Additional CSS loaded on bottom with script
+1. JS loading moved to the bottom
+1. Smal CSS and JS scripts minified and embeded in HTML.
+1. Sourceset attribute added to Images
 
-Some useful tips to help you get started:
-
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
-
-####Part 2: Optimize Frames per Second in pizza.html
-
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+####Pizza page JS optimization
+1. Layout affecting variables set outside of loops
+ 
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
