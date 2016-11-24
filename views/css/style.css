@@ -49,3 +49,6 @@ form {
  .container {
   background-color: rgba(240, 60, 60, 0.8);
 }
+
+-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+backface-visibility: hidden;
