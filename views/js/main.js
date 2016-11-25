@@ -470,8 +470,9 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+// setting pizzasDiv out of the loop
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -503,12 +504,23 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  //var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
   var to_the_top = document.body.scrollTop
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((to_the_top / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+//Calculating phase in separate loop to reduce to_the_top request to max 5
+  var phase = [];
+  for (var i = 0; i < 5; i++) {
+    phase.push(Math.sin(to_the_top / 1250 + i) * 100);
   }
+
+  for (var i = 0, max = items.length; i < max; i++) {
+    items[i].style.left = items[i].basicLeft + phase[i%5] + 'px';
+  }
+
+  //for (var i = 0; i < items.length; i++) {
+    //var phase = Math.sin((to_the_top / 1250) + (i % 5));
+    //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  //}
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
@@ -527,7 +539,21 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+
+  //reducing pizzas qnty using screen size
+  var pizzas_qnty = 15;
+  var screen_size = window.innerHeight;
+  if (screen_size > 270){
+      pizzas_qnty = 20
+  } else if (screen_size > 520){
+      pizzas_qnty = 30
+  } else if (screen_size > 700){
+      pizzas_qnty = 40
+  }
+  //console.log('Screen size:', screen_size)
+  //console.log('Pizzas:', pizzas_qnty)
+
+  for (var i = 0; i < pizzas_qnty; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
