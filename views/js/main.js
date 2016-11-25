@@ -452,7 +452,8 @@ var resizePizzas = function(size) {
     //requesting and calculating dx and newwidth out of layout affecting loop
     var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[0], size);
     var newwidth = (document.querySelectorAll(".randomPizzaContainer")[0].offsetWidth + dx) + 'px';
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+    var container_lenght = document.querySelectorAll(".randomPizzaContainer").length
+    for (var i = 0; i < container_lenght; i++) {
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     }
   }
